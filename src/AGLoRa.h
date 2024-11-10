@@ -2,9 +2,11 @@
 
     #define AGLoRa
 
-    #include "AGLoRa_BLE.h"
+    #include "AGLoRa_Config.h"
+    #include "AGLoRa_BLE.h"  //BLE includes LORA.h which includes Indication.h
     #include "AGLoRa_SRAM.h"
     #include "AGLoRa_GPS.h"
+    #include "AGLoRa_LORA.h" 
 
     class AGLORA
     {
@@ -21,6 +23,7 @@
     private:
         IMemory * _memory;
         BLE_HM10 * _ble;
+        GPS * _gpsmodule;
         void sendAllPackagesToBLE();
         void sendPackageToBLEFromStorage(unsigned int index);
 

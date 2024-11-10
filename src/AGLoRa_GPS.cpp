@@ -92,7 +92,7 @@ void GPS::printReadingIndication(unsigned long start, unsigned int delay)
 #endif
 }
 
-void GPS::updateLocation(DATA *dataPackage)
+void GPS::updateLocation(GPSDATA *dataPackage)
 {
 
 #if DEBUG_MODE && DEBUG_GPS
@@ -130,7 +130,7 @@ void GPS::updateLocation(DATA *dataPackage)
         dataPackage->minute = gpsModule.time.minute();
         dataPackage->second = gpsModule.time.second();
 
-        strcpy(dataPackage->name, NAME);
+        //strcpy(dataPackage->name, NAME);
 
         printGPSInfo();
         _indication->gps(GPSStatuses::correct); // GPS is valid

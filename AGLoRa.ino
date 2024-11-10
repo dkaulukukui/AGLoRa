@@ -43,7 +43,7 @@ void loop()
 #if I_WANT_TO_SEND_MY_LOCATION
     aglora.clearDataPacket(&loraDataPackage.data); // clear structure before reading new data
     aglora.updateSensors(&loraDataPackage.data);   // add sensors
-    gps.updateLocation(&loraDataPackage.data);     // add locations
+    //gps.updateLocation(&loraDataPackage.data);     // add locations
     loraDataPackage.ttl = TTL;                     // time to live (for mesh network)
 
     aglora.printPackage(&loraDataPackage);
