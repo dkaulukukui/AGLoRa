@@ -31,7 +31,7 @@
     class GPS
     {
         //SoftwareSerial gpsPort;
-        #define gpsPort Serial1
+        //#define gpsPort Serial1
         TinyGPSPlus gpsModule;
     public:
         GPS(uint8_t pinRx, uint8_t pinTx, long speed, INDICATION * indication);

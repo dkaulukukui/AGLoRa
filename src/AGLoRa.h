@@ -1,5 +1,4 @@
 #ifndef AGLoRa
-
     #define AGLoRa
 
     #include "AGLoRa_Config.h"
@@ -16,9 +15,11 @@
         void checkMemoryToBLE();
         void clearDataPacket(DATA * trackerData);
         void updateSensors(DATA * trackerData);
+        void fakeUpdateSensors(DATA * trackerData);
         void printPackage(LORADATA * loraDataPacket);
         void getRequest(String request);
         void sendPackageToBLE(DATA * trackerData, int index);
+        String sendToPhone(DATA *package);
 
     private:
         IMemory * _memory;
